@@ -24,9 +24,9 @@ const rootElement = document.querySelector('#root');
 // renderGreeting(rootElement);
 
 const element = (
-  <div class="greeting">
-    <h1 class="greeting__title">Hello, world!</h1>
-    <p class="greeting__text">I'm learning React</p>
+  <div className="greeting">
+    <h1 className="greeting__title">Hello, world!</h1>
+    <p className="greeting__text">I'm learning React</p>
   </div>
 );
 
