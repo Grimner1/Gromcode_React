@@ -20,10 +20,10 @@ const rootElement = document.querySelector("#root");
 // renderGreeting(rootElement);
 
 const element = React.createElement("div", { className: "greeting" }, [
-  React.createElement("h1", { className: "greeting_title" }, "Hello, world!"),
+  React.createElement("h1", { className: "greeting__title" }, "Hello, world!"),
   React.createElement(
     "p",
-    { className: "greeting_text" },
+    { className: "greeting__text" },
     "I'm learning React"
   ),
 ]);
