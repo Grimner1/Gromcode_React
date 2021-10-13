@@ -5,8 +5,7 @@ const GREEN = '#0f0';
 const BLUE = '#00f';
 
 class Colors extends React.Component {
-  setBodyColor = (color, e) => {
-    console.log(e.target);
+  setBodyColor = color => {
     document.body.style.backgroundColor = color;
   };
 
@@ -16,17 +15,17 @@ class Colors extends React.Component {
         <button
           className="colors__button"
           style={{ backgroundColor: RED }}
-          onClick={e => this.setBodyColor(RED, e)}
+          onClick={e => this.setBodyColor(RED)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: GREEN }}
-          onClick={e => this.setBodyColor(GREEN, e)}
+          onClick={e => this.setBodyColor(GREEN)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: BLUE }}
-          onClick={e => this.setBodyColor(BLUE, e)}
+          onClick={e => this.setBodyColor(BLUE)}
         ></button>
       </div>
     );
