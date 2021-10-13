@@ -15,17 +15,17 @@ class Colors extends React.Component {
         <button
           className="colors__button"
           style={{ backgroundColor: RED }}
-          onClick={e => this.setBodyColor(RED)}
+          onClick={() => this.setBodyColor(RED)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: GREEN }}
-          onClick={e => this.setBodyColor(GREEN)}
+          onClick={() => this.setBodyColor(GREEN)}
         ></button>
         <button
           className="colors__button"
           style={{ backgroundColor: BLUE }}
-          onClick={e => this.setBodyColor(BLUE)}
+          onClick={() => this.setBodyColor(BLUE)}
         ></button>
       </div>
     );
