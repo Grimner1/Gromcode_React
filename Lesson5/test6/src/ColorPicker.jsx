@@ -8,16 +8,22 @@ class ColorPicker extends Component {
     };
   }
 
-  showTextColor = e => {
-    // console.log(e.target.dataset.color);
-    this.setState({
-      colorName: (this.state.colorName = e.target.dataset.color),
-    });
-  };
+  // showTextColor = e => {
+  //   // console.log(e.target.dataset.color);
+  //   this.setState({
+  //     colorName: (this.state.colorName = e.target.dataset.color),
+  //   });
+  // };
 
   hideTextColor = () => {
     this.setState({
       colorName: (this.state.colorName = ''),
+    });
+  };
+
+  setTitle = color => {
+    this.setState({
+      colorName: (this.state.colorName = color),
     });
   };
 
@@ -28,20 +34,20 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            data-color="Coral"
-            onMouseOver={e => this.showTextColor(e)}
+            // data-color="Coral"
+            onMouseEnter={() => this.setTitle('Coral')}
             onMouseOut={() => this.hideTextColor()}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            data-color="Auqa"
-            onMouseOver={e => this.showTextColor(e)}
+            // data-color="Auqa"
+            onMouseEnter={() => this.setTitle('Aqua')}
             onMouseOut={() => this.hideTextColor()}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            data-color="Bisque"
-            onMouseOver={e => this.showTextColor(e)}
+            // data-color="Bisque"
+            onMouseEnter={() => this.setTitle('Bisque')}
             onMouseOut={() => this.hideTextColor()}
           ></button>
         </div>
