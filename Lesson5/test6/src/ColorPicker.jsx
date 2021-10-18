@@ -9,6 +9,7 @@ class ColorPicker extends Component {
   }
 
   showTextColor = e => {
+    // console.log(e.target.dataset.color);
     this.setState({
       colorName: (this.state.colorName = e.target.dataset.color),
     });
@@ -33,7 +34,7 @@ class ColorPicker extends Component {
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            data-color="Aqua"
+            data-color="Auqa"
             onMouseOver={e => this.showTextColor(e)}
             onMouseOut={() => this.hideTextColor()}
           ></button>
