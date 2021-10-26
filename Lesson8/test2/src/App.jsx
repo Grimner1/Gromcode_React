@@ -19,14 +19,28 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.toggle}>Toggle</button>
-        <div>{this.state.visible && <Clock />}</div>
-      </div>
+      <>
+        <div>
+          <button onClick={this.toggle}>Toggle</button>
+          <div className="clock">
+            {this.state.visible && <Clock location={'SanVyverna'} offset={16} />}
+          </div>
+        </div>
+        <div>
+          <button onClick={this.toggle}>Toggle</button>
+          <div className="clock">
+            {this.state.visible && <Clock location={'VasHamsfetr'} offset={14} />}
+          </div>
+        </div>
+        <div>
+          <button onClick={this.toggle}>Toggle</button>
+          <div className="clock">
+            {this.state.visible && <Clock location={'LastCity'} offset={2} />}
+          </div>
+        </div>
+      </>
     );
   }
 }
-
-//sasas
 
 export default App;

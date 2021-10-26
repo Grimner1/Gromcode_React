@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import moment from 'moment';
+
+const formatDate = date => moment(date).format('hh:mm:ss A');
+
+const getTimeWithOffset = offset => {
+  const currentTime = new Date();
+  const utcOffset = currentTime.getTimezoneOffset() / 60;
+  return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+};
 
 class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(),
+      time: formatDate(getTimeWithOffset(props.offset)),
     };
   }
 
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({
-        date: new Date(),
+        time: formatDate(getTimeWithOffset(this.props.offset)),
       });
     }, 1000);
   }
@@ -21,21 +30,16 @@ class Clock extends Component {
   }
 
   render() {
-    return <div>{this.state.date.toLocaleString()}</div>;
+    // console.log(this.props.location);
+    return (
+      <>
+        <div className="clock">
+          <div className="clock__location">{this.props.location}</div>
+          <div className="clock__time">{this.state.time}</div>
+        </div>
+      </>
+    );
   }
 }
 
 export default Clock;
-
-{
-  /* <div className="clock">
-  <div className="clock__location">
-      <!-- название города -->
-      New York
-  </div>
-  <div className="clock__time">
-      <!-- локальное время в этом городе (с учером переданного смещения) -->
-      7:00:51 AM
-  </div>
-</div> */
-}
