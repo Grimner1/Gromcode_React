@@ -7,15 +7,15 @@ class Life extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount:API calls, subscriptions');
+    console.log('componentDidMount: API calls, subscriptions');
   }
 
   componentWillUnmount() {
-    console.log('omponentWillUnmount():cleanup before DOM related component will be removed');
+    console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
   }
 
   shouldComponentUpdate() {
-    console.log('shouldComponentUpdate(nextPrps, nextState): decide to render or not to render');
+    console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
     return 1;
   }
 
