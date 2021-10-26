@@ -19,7 +19,6 @@ class Dimensions extends Component {
 
   onResize = e => {
     const { innerWidth, innerHeight } = e.target;
-
     this.setDimensions(innerWidth, innerHeight);
   };
 
@@ -28,6 +27,7 @@ class Dimensions extends Component {
       width,
       height,
     });
+    document.title = `${innerWidth} x ${innerHeight}`;
   };
 
   render() {
