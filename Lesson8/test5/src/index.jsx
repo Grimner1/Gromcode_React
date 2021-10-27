@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 // import App from './App.jsx';
-import ConnectionStatus from './Connection Status';
+import ConnectionStatus from './ConnectionStatus';
 
 const rootElement = document.querySelector('#root');
 

@@ -25,7 +25,7 @@ class ConnectionStatus extends Component {
 
   render() {
     if (this.state.status) {
-      return <div className="status status">online</div>;
+      return <div className="status">online</div>;
     }
     return <div className="status status_offline">offline</div>;
   }
