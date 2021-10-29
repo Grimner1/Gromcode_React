@@ -6,7 +6,7 @@ const App = () => {
     console.log(user);
   };
 
-  return <>{<UserForm createUser={createUser} />}</>;
+  return <>{<UserForm onSubmit={createUser} />}</>;
 };
 
 export default App;
