@@ -15,11 +15,6 @@ class ShoppingCart extends Component {
         name: 'iPad Pro',
         price: 799,
       },
-      {
-        id: '3',
-        name: 'iPad Pro',
-        price: 799,
-      },
     ],
   };
 
@@ -28,7 +23,7 @@ class ShoppingCart extends Component {
     const count = this.state.cartItem.length;
     return (
       <div className="column">
-        <CartTitle userName={this.props.userData.firstName} count={count} />
+        <CartTitle userName={this.props.userName} count={count} />
 
         <ProductsList cartItem={this.state.cartItem} total={total} />
       </div>
