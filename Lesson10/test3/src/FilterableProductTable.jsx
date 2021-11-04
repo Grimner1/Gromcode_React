@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
-import ProductTable from './ProductRow.jsx';
+import ProductTable from './ProductTable';
 
 class FilterableProductTable extends Component {
   render() {
