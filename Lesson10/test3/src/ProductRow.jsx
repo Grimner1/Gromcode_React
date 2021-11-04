@@ -3,8 +3,8 @@ import React from 'react';
 
 const ProductRow = ({ products }) => {
   console.log(products);
-  console.log(111);
 
+  // const product = this.props.product;
   const name = products.stocked ? (
     products.name
   ) : (

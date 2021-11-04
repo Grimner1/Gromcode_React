@@ -4,7 +4,6 @@ import ProductTable from './ProductRow.jsx';
 
 class FilterableProductTable extends Component {
   render() {
-    // console.log(this.props.products);
     return (
       <div>
         <SearchBar />
