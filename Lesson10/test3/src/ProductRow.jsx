@@ -21,8 +21,6 @@ import React, { Component } from 'react';
 
 class ProductRow extends Component {
   render() {
-    console.log(this.props.product);
-
     const product = this.props.product;
     const name = product.stocked ? (
       product.name
