@@ -4,16 +4,6 @@ import Expand from './Expand';
 const title = 'Some title';
 
 class App extends Component {
-  state = {
-    isShowExpand: false,
-  };
-
-  onClick = () => {
-    this.setState({
-      isShowExpand: !this.state.isShowExpand,
-    });
-  };
-
   render() {
     return (
       <div className="app">
