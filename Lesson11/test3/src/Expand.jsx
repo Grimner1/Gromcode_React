@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 class Expand extends Component {
   render() {
@@ -11,13 +9,7 @@ class Expand extends Component {
         <div className="expand__header">
           <span className="expand__title">{title}</span>
           <button className="expand__toggle-btn" onClick={onClick}>
-            {isShow ? (
-              <FontAwesomeIcon icon={faChevronUp} />
-            ) : (
-              <FontAwesomeIcon icon={faChevronDown} />
-            )}
-            {/* <FontAwesomeIcon icon={faChevronUp} />
-            <FontAwesomeIcon icon={faChevronDown} /> */}
+            {isShow ? <i className="fas fa-chevron-up" /> : <i className="fas fa-chevron-down" />}
           </button>
         </div>
         <div className="expand__content">{isShow && children}</div>
