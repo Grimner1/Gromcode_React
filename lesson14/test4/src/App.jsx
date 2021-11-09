@@ -1,10 +1,7 @@
 import React from 'react';
 
-
 const App = () => {
-  return (
-//
-  );
+  return <div>Hello, React!</div>;
 };
 
 //sasas
