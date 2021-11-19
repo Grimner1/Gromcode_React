@@ -1,7 +1,8 @@
 import React from 'react';
+import ConnectionStatus from './ConnectionStatus';
 
 const App = () => {
-  return <div>Hello, React!</div>;
+  return <ConnectionStatus />;
 };
 
 //sasas

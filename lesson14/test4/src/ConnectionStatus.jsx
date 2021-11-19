@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ConnectionStatus = () => {
-  return <div class="status status_offline">Offline</div>;
+  const [status, setStatus] = useState(true);
+
+  useEffect(() => {
+    const handleStatus = e => {
+      console.log(e);
+      setStatus(!status);
+    };
+
+    window.addEventListener('offline', handleStatus);
+    window.addEventListener('online', handleStatus);
+
+    // return {
+    //   window.addEventListener('offline', handleStatus);
+    //   window.addEventListener('online', handleStatus);
+    // }
+  });
+
+  return (
+    <>
+      {status && <div className="status">online</div>}
+      {!status && <div className="status status_offline">offline</div>}
+    </>
+  );
 };
 
 export default ConnectionStatus;
