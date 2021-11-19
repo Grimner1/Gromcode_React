@@ -12,10 +12,7 @@ const ConnectionStatus = () => {
     window.addEventListener('offline', handleStatus);
     window.addEventListener('online', handleStatus);
 
-    // return {
-    //   window.addEventListener('offline', handleStatus);
-    //   window.addEventListener('online', handleStatus);
-    // }
+    return window.addEventListener('offline', handleStatus);
   });
 
   return (
