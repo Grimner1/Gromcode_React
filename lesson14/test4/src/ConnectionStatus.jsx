@@ -4,8 +4,7 @@ const ConnectionStatus = () => {
   const [status, setStatus] = useState(true);
 
   useEffect(() => {
-    const handleStatus = e => {
-      console.log(e);
+    const handleStatus = () => {
       setStatus(!status);
     };
 
