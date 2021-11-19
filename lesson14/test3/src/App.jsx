@@ -1,9 +1,6 @@
 import React from 'react';
+import Demo from './Demo';
 
-const App = () => {
-  return <div>Hello, React!</div>;
-};
-
-//sasas
+const App = () => <Demo />;
 
 export default App;
